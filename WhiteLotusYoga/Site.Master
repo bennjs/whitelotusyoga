@@ -11,7 +11,8 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -78,7 +79,42 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img alt="Come visit us!" src="/Images/map.png" id="mapImage"/>
+                        <ul class="content list" id="address">
+                            <li>Cooper Building</li>
+                            <li>King William Walk</li>
+                            <li>Greenwich</li>
+                            <li>London, SE10 9JH</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4" id="footerCenter">
+                        <ul class="content list-inline">
+                            <li><a href="https://twitter.com/bennjs">Home</a></li>
+                            <li><a href="http://uk.linkedin.com/in/bnjstokes">About</a></li>
+                            <li><a href="https://github.com/bennjs/">Schedules</a></li>
+                            <li><a href="https://github.com/bennjs/">Our Pricing</a></li>
+                        </ul>
+                        <p>&copy; <%: DateTime.Now.Year %> - White Lotus Yoga London</p>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="content list-inline" id="whiteLotusSocial">
+                            <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/whitelotusLDN"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" id="mySocial">
+                    <hr />
+                    <p class="dull">Made with <i class="fa fa-code"></i> by Benjamin Stokes</p>
+                    <ul class="content list-inline">
+                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i>@Bennjs</a></li>
+                        <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i>GitHub</a></li>
+                    </ul>
+                </div>
             </footer>
         </div>
     </form>

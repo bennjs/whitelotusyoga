@@ -27,6 +27,31 @@ input[type="select"] {
     max-width: 280px;
 }
 
+/** FOOTER **/
+
+footer .dull {
+    color: grey;
+}
+#mapImage {
+    float: left;
+}
+#address {
+    float: left;
+    list-style-type: none;
+}
+#footerCenter {
+    text-align: center;
+}
+#whiteLotusSocial {
+    font-size: 40px;
+    padding-top: 8px;
+    padding-right: 20px;
+    text-align: center;
+}
+#mySocial {
+    text-align: center;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
