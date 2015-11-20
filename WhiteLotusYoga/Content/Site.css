@@ -1,5 +1,7 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
+    background-color: #F9D423;
+    background-image: linear-gradient(to bottom, #F9D423, #FF4E50 100%);
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -27,27 +29,48 @@ input[type="select"] {
     max-width: 280px;
 }
 
+/** NavBar **/
+.navbar {
+    background-color: #000
+}
+
+/** JUMBOTRON **/
+.jumbotron {
+    background: none;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.button-center {
+    text-align: center;
+}
+
 /** FOOTER **/
 
 footer .dull {
     color: grey;
 }
+
 #mapImage {
     float: left;
 }
+
 #address {
     float: left;
     list-style-type: none;
 }
+
 #footerCenter {
     text-align: center;
 }
+
 #whiteLotusSocial {
     font-size: 40px;
     padding-top: 8px;
     padding-right: 20px;
     text-align: center;
 }
+
 #mySocial {
     text-align: center;
 }
@@ -57,6 +80,7 @@ footer .dull {
     .jumbotron {
         margin-top: 20px;
     }
+
     .body-content {
         padding: 0;
     }

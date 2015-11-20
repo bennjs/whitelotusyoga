@@ -405,6 +405,7 @@ p {
 }
 
 .lead {
+  margin-top: 88px;
   margin-bottom: 20px;
   font-size: 16.099999999999998px;
   font-weight: 200;
@@ -4956,7 +4957,7 @@ a.list-group-item.active > .badge,
     padding-bottom: 48px;
   }
   .container .jumbotron {
-    padding-right: 60px;
+    padding-right: 0px;
     padding-left: 60px;
   }
   .jumbotron h1 {

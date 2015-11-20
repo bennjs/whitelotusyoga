@@ -6,13 +6,14 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - White Lotus Yoga London</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -47,13 +48,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">White Lotus Yoga</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Team">Our Team</a></li>
+                        <li><a runat="server" href="~/Schedule">Schedule</a></li>
+                        <li><a runat="server" href="~/Pricing">Pricing</a></li>
+                        <li><a runat="server" href="~/Forum">Forum</a></li>
+
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -86,15 +89,16 @@
                             <li>Cooper Building</li>
                             <li>King William Walk</li>
                             <li>Greenwich</li>
-                            <li>London, SE10 9JH</li>
+                            <li>London</li>
+                            <li>SE10 9JH</li>
                         </ul>
                     </div>
                     <div class="col-md-4" id="footerCenter">
                         <ul class="content list-inline">
-                            <li><a href="https://twitter.com/bennjs">Home</a></li>
-                            <li><a href="http://uk.linkedin.com/in/bnjstokes">About</a></li>
-                            <li><a href="https://github.com/bennjs/">Schedules</a></li>
-                            <li><a href="https://github.com/bennjs/">Our Pricing</a></li>
+                            <li><a runat="server" href="~/">Home</a></li>
+                            <li><a runat="server" href="~/About">About</a></li>
+                            <li><a runat="server" href="~/Schedules">Schedules</a></li>
+                            <li><a runat="server" href="~/Pricing">Our Pricing</a></li>
                         </ul>
                         <p>&copy; <%: DateTime.Now.Year %> - White Lotus Yoga London</p>
                     </div>
@@ -102,17 +106,17 @@
                         <ul class="content list-inline" id="whiteLotusSocial">
                             <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/whitelotusLDN"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://twitter.com/WhiteLotusLDN"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="row" id="mySocial">
                     <hr />
-                    <p class="dull">Made with <i class="fa fa-code"></i> by Benjamin Stokes</p>
+                    <p class="dull">Benjamin Stokes</p>
                     <ul class="content list-inline">
-                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i>@Bennjs</a></li>
-                        <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
-                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i>GitHub</a></li>
+                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i> @Bennjs</a></li>
+                        <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i> GitHub</a></li>
                     </ul>
                 </div>
             </footer>
