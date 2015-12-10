@@ -1,7 +1,55 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
+﻿h1,
+h2,
+h3,
+p {
+    font-family: 'Lato', arial, sans-serif;
+}
+
+/** NavBar **/
+.navbar {
+    background-color: #FFF;
+}
+
+    .navbar .registerLink {
+        font-weight: bold;
+    }
+.nav.navbar-nav li a {
+   color: #000;
+ }
+    .nav.navbar-nav a:hover {
+        color: grey !important;
+    }
+.navbar-brand {
+    font-family: 'Lato', arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000 !important;
+}
+
+/** JUMBOTRON **/
+.body-content .jumbotron {
+    /** background-color: #F9D423;    
+    background-image: linear-gradient(to bottom, #F9D423, #FF4E50 100%); **/
+    background: url('/Images/jumbotron-image.jpg') no-repeat top center !important;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: -10px;
+    display: block;}
+
+    .jumbotron .container {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100% !important;
+    }
+
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    background-color: #F9D423;
-    background-image: linear-gradient(to bottom, #F9D423, #FF4E50 100%);
+    font-family: 'Lato', arial, sans-serif;
+    background-color: #FFF;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -9,6 +57,7 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
+    font-family: 'Lato', arial, sans-serif;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -27,18 +76,6 @@ input[type="email"],
 input[type="tel"],
 input[type="select"] {
     max-width: 280px;
-}
-
-/** NavBar **/
-.navbar {
-    background-color: #000
-}
-
-/** JUMBOTRON **/
-.jumbotron {
-    background: none;
-    text-align: center;
-    margin-bottom: -10px;
 }
 
 .button-center {
@@ -75,6 +112,42 @@ footer .dull {
     text-align: center;
 }
 
+/** PRICING PAGE **/
+.pricingTitle {
+    margin: auto;
+    text-align: center;
+}
+
+.pricingText {
+    margin: auto;
+    text-align: center;
+}
+#extraInformationRow {
+    margin: auto;
+    max-width: 65%;
+}
+.pricingExtraInfoTitle {
+    font-weight: bold;
+}
+
+.pricesTable {
+    margin: auto;
+}
+
+.pricesTable th {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+}
+    .pricesTable .topHeader {
+        padding-top: 0px;
+    }
+.pricesTable .item {
+    padding-right: 140px;
+}
+.pricesTable .price {
+    text-align: center;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {

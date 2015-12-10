@@ -1,7 +1,7 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WhiteLotusYoga.Contact" %>
+﻿<%@ Page Title="Upcoming Classes & Workshops" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Schedule.aspx.cs" Inherits="WhiteLotusYoga.Schedule" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
+    <h2><%: Title %></h2>
     <h3>Your contact page.</h3>
     <address>
         One Microsoft Way<br />

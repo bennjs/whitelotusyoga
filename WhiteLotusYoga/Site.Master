@@ -6,15 +6,22 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - White Lotus Yoga London</title>
+    <title>White Lotus Yoga London - <%: Page.Title %></title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+
+    <!-- Font Source -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
     <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+    <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+    <!-- Site CSS -->
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
@@ -51,18 +58,16 @@
                     <a class="navbar-brand" runat="server" href="~/">White Lotus Yoga</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Team">Our Team</a></li>
-                        <li><a runat="server" href="~/Schedule">Schedule</a></li>
-                        <li><a runat="server" href="~/Pricing">Pricing</a></li>
-                        <li><a runat="server" href="~/Forum">Forum</a></li>
 
-                    </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Team">Our Team</a></li>
+                                <li><a runat="server" href="~/Schedule">Schedule</a></li>
+                                <li><a runat="server" href="~/Pricing">Pricing</a></li>
+                                <li><a runat="server" href="~/Forum">Forum</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                <li><a runat="server" href="~/Account/Register" class="registerLink">Register</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -84,7 +89,7 @@
             <footer>
                 <div class="row">
                     <div class="col-md-4">
-                        <img alt="Come visit us!" src="/Images/map.png" id="mapImage"/>
+                        <img alt="Come visit us!" src="/Images/map.png" id="mapImage" />
                         <ul class="content list" id="address">
                             <li>Cooper Building</li>
                             <li>King William Walk</li>
@@ -96,8 +101,8 @@
                     <div class="col-md-4" id="footerCenter">
                         <ul class="content list-inline">
                             <li><a runat="server" href="~/">Home</a></li>
-                            <li><a runat="server" href="~/About">About</a></li>
-                            <li><a runat="server" href="~/Schedules">Schedules</a></li>
+                            <li><a runat="server" href="~/Team">Our Team</a></li>
+                            <li><a runat="server" href="~/Schedule">Schedules</a></li>
                             <li><a runat="server" href="~/Pricing">Our Pricing</a></li>
                         </ul>
                         <p>&copy; <%: DateTime.Now.Year %> - White Lotus Yoga London</p>
@@ -114,7 +119,7 @@
                     <hr />
                     <p class="dull">Benjamin Stokes</p>
                     <ul class="content list-inline">
-                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i> @Bennjs</a></li>
+                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i> @bennjs</a></li>
                         <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
                         <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i> GitHub</a></li>
                     </ul>
