@@ -18,7 +18,7 @@
                     <asp:TextBox runat="server" ID="lastName" CssClass="form-control" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="lastName"
                         CssClass="text-danger" ErrorMessage="Please enter your last name!" />
-            </div>
+                </div>
             </div>
             <div class="form-group">
                 <asp:TextBox runat="server" ID="usernameTextBox" CssClass="form-control" />
@@ -37,9 +37,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <%--        <div class="form-horizontal">
             <h4 class="registrationTitle">Please register with White Lotus!</h4>

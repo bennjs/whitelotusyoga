@@ -53,7 +53,6 @@
                     <asp:TableCell class="price" runat="server">£580</asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
-
         </div>
         <div class="col-md-6">
             <h3 class="text-center">Rentals & Extras</h3>

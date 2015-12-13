@@ -30,7 +30,7 @@ p {
 .body-content .jumbotron {
     /** background-color: #F9D423;    
     background-image: linear-gradient(to bottom, #F9D423, #FF4E50 100%); **/
-    background: url('/Images/jumbotron-image.jpg') no-repeat top center !important;
+    background: url('/Images/jumbotron-image.jpg') no-repeat center top !important;
     background-size: cover;
     height: 100%;
     text-align: center;
