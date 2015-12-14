@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,26 +13,53 @@ namespace WhiteLotusYoga.Account
 {
     public partial class Register : Page
     {
-        protected void CreateUser_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = usernameTextBox.Text, Email = emailTextBox.Text };
-            IdentityResult result = manager.Create(user, passwordTextBox.Text);
-            if (result.Succeeded)
+            if (IsPostBack)
             {
-                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
-                //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
+                SqlConnection connStr = new SqlConnection(ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString);
+                connStr.Open();
+                string checkAccount = "SELECT count(*) from account WHERE username = '" + Request.Form["usernameInput"] + "'";
+                SqlCommand command = new SqlCommand(checkAccount, connStr);
+                int temp = Convert.ToInt32(command.ExecuteScalar().ToString());
+                connStr.Close();
+                if (temp == 1)
+                {
+                    Response.Write("This Username already exists!");
+                }
+            }
+        }
 
-                signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-            }
-            else 
+        protected void registerButton_Click(object sender, EventArgs e)
+        {
+            var firstName = "";
+            var lastName = "";
+            var username = "";
+            var emailAddress = "";
+            var password = "";
+            Response.Write("The Button Works");
+            try
             {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
+                firstName = Request.Form["firstNameInput"];
+                lastName = Request.Form["lastNameInput"];
+                username = Request.Form["usernameInput"];
+                emailAddress = Request.Form["emailInput"];
+                password = Request.Form["passwordInput"];
+
+
+
+                SqlConnection connStr = new SqlConnection(ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString);
+                connStr.Open();
+                string insertUserAccount = "INSERT INTO account (first_name, last_name, username, email_address, password) VALUES ('" + firstName + "', '" + lastName + "','" + username + "', '" + emailAddress + "', '" + password + "')";
+                SqlCommand command = new SqlCommand(insertUserAccount, connStr);
+                command.ExecuteNonQuery();
+                connStr.Close();
+                Response.Write("Registration was successful!");                
+            } catch (Exception ex)
+            {
+                Response.Write("Error: " + ex.Message);
             }
+            
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
@@ -12,49 +14,48 @@ namespace WhiteLotusYoga.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
-            // Enable this once you have account confirmation enabled for password reset functionality
-            //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
+            
         }
 
-        protected void LogIn(object sender, EventArgs e)
+        protected void logInButton_Click(object sender, EventArgs e)
         {
-            if (IsValid)
+            SqlConnection connStr = new SqlConnection(ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString);
+            connStr.Open();
+            string checkAccountEmail = "SELECT count(*) from account WHERE email_address = '" + Request.Form["email"] + "'";
+            SqlCommand emailCommand = new SqlCommand(checkAccountEmail, connStr);
+            int temp = Convert.ToInt32(emailCommand.ExecuteScalar().ToString());
+            connStr.Close();
+            if (temp == 1)
             {
-                // Validate the user password
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
-
-                // This doen't count login failures towards account lockout
-                // To enable password failures to trigger lockout, change to shouldLockout: true
-                var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
-
-                switch (result)
+                try
                 {
-                    case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                        break;
-                    case SignInStatus.LockedOut:
-                        Response.Redirect("/Account/Lockout");
-                        break;
-                    case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
-                                                        Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
-                        break;
-                    case SignInStatus.Failure:
-                    default:
-                        FailureText.Text = "Invalid login attempt";
-                        ErrorMessage.Visible = true;
-                        break;
+                    connStr.Open();
+                    string checkAccountPassword = "SELECT password from account WHERE password = '" + Request.Form["password"] + "'";
+                    SqlCommand passCommand = new SqlCommand(checkAccountPassword, connStr);
+                    string password = passCommand.ExecuteScalar().ToString().Replace(" ", "");
+                    if (password == Request.Form["password"])
+                    {
+                        Session["New"] = Request.Form["email"];
+                        //DateTime currentTime = DateTime.Now;
+                        //string updateLastLogin = "UPDATE account SET last_log_in_date='" + currentTime + "' WHERE email_address = '" + Request.Form["email"] + "'";
+                        //SqlCommand updateLastLoginCommand = new SqlCommand(updateLastLogin, connStr);                        
+                        //updateLastLoginCommand.ExecuteNonQuery();
+                        Response.Write("Bingo");
+                    }
+                    else
+                    {
+                        Response.Write("Nuh uh");
+                    }
+                    connStr.Close();
                 }
+                catch (Exception ex)
+                {
+                    Response.Write("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                Response.Write("No Username");
             }
         }
     }

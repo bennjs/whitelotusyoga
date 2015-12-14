@@ -43,13 +43,20 @@
         <div class="col-md-12">
             <hr />
             <h2 class="text-center">Today's Classes</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <div class="button-center">
-                <p>
-                    <a class="btn btn-default" runat="server" href="~/Schedule">Search Other Dates &raquo;</a>
-                </p>
+            <div class="container">
+                <table class="homePageTable">
+                    <tr>
+                        <td>ID </td>
+                        <td>Name </td>
+                    </tr>
+                    <%=getWhileLoopData()%>
+                </table>
+                <br />
+                <div class="button-center">
+                    <p>
+                        <a class="btn btn-default" runat="server" href="~/Schedule">Search Other Dates &raquo;</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

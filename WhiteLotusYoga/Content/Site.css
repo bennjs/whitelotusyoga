@@ -82,6 +82,24 @@ input[type="select"] {
     text-align: center;
 }
 
+.homePageTable {
+    margin: auto;
+}
+
+.homePageTable tr {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    border-bottom-color: black;
+}
+.homePageTable td {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+
 /** FOOTER **/
 
 footer .dull {
@@ -148,6 +166,19 @@ footer .dull {
 .pricesTable .price {
     text-align: center;
 }
+
+/** REGISTRATION PAGE **/
+.row .centered-form {
+    display: block;
+    margin-top: 55px;
+    width: 100%;
+}
+.form-group {
+    padding-right: -10px;
+    display: block;
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {

@@ -338,6 +338,7 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="DBConnectivity.cs" />
     <Compile Include="Team.aspx.cs">
       <DependentUpon>Team.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
