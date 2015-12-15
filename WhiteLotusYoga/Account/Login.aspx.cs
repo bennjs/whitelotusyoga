@@ -21,7 +21,7 @@ namespace WhiteLotusYoga.Account
         {
             SqlConnection connStr = new SqlConnection(ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString);
             connStr.Open();
-            string checkAccountEmail = "SELECT count(*) from account WHERE email_address = '" + Request.Form["email"] + "'";
+            string checkAccountEmail = "SELECT count(*) from account WHERE username = '" + Request.Form["username"] + "'";
             SqlCommand emailCommand = new SqlCommand(checkAccountEmail, connStr);
             int temp = Convert.ToInt32(emailCommand.ExecuteScalar().ToString());
             connStr.Close();
@@ -35,16 +35,22 @@ namespace WhiteLotusYoga.Account
                     string password = passCommand.ExecuteScalar().ToString().Replace(" ", "");
                     if (password == Request.Form["password"])
                     {
-                        Session["New"] = Request.Form["email"];
-                        //DateTime currentTime = DateTime.Now;
-                        //string updateLastLogin = "UPDATE account SET last_log_in_date='" + currentTime + "' WHERE email_address = '" + Request.Form["email"] + "'";
-                        //SqlCommand updateLastLoginCommand = new SqlCommand(updateLastLogin, connStr);                        
+                        Session["UserName"] = Request.Form["username"];
+                        //string updateLastLogin = "UPDATE account SET last_log_in_date='" + currentDate + "' WHERE username = '" + Session["UserName"] + "'";
+                        //SqlCommand updateLastLoginCommand = new SqlCommand(updateLastLogin, connStr);
                         //updateLastLoginCommand.ExecuteNonQuery();
-                        Response.Write("Bingo");
+                        if (Request.Form["username"] == "admin")
+                        {
+                            Response.Redirect("~/Admin/Dashboard");
+                        }
+                        else
+                        {
+                            Response.Redirect("~/");
+                        }
                     }
                     else
                     {
-                        Response.Write("Nuh uh");
+                        Response.Write("Incorrect Password");
                     }
                     connStr.Close();
                 }

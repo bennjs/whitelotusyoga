@@ -14,7 +14,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                            <input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">

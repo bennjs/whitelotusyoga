@@ -130,6 +130,41 @@ footer .dull {
     text-align: center;
 }
 
+/** SCHEDULE PAGE **/
+.classScheduleTable {
+    margin: auto;
+}
+
+.classScheduleTable tr {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    border-bottom-color: black;
+}
+.classScheduleTable td {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.workshopScheduleTable {
+    margin: auto;
+}
+
+.workshopScheduleTable tr {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    border-bottom-color: black;
+}
+.workshopScheduleTable td {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
 /** PRICING PAGE **/
 .pricingTitle {
     margin: auto;
@@ -178,6 +213,27 @@ footer .dull {
     display: block;
 }
 
+
+/** MANAGEMENT DASHBOARD **/
+#staffHeader {
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    border-width: thin;
+}
+#staffItemLeft {
+    text-align: center;
+    padding-right: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    border-width: thin;
+}
+#staffItemRight {
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    border-width: thin;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

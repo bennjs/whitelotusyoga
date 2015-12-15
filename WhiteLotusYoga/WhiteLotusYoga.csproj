@@ -154,6 +154,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\RegisterTwo.aspx" />
+    <Content Include="Admin\CreateClass.aspx" />
+    <Content Include="Admin\CreateWorkshop.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Forum.aspx" />
     <Content Include="Images\jumbotron-image.jpg" />
     <Content Include="Team.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
@@ -309,6 +314,13 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\RegisterTwo.aspx.cs">
+      <DependentUpon>RegisterTwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterTwo.aspx.designer.cs">
+      <DependentUpon>RegisterTwo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,8 +349,36 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\CreateClass.aspx.cs">
+      <DependentUpon>CreateClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateClass.aspx.designer.cs">
+      <DependentUpon>CreateClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateWorkshop.aspx.cs">
+      <DependentUpon>CreateWorkshop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateWorkshop.aspx.designer.cs">
+      <DependentUpon>CreateWorkshop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBConnectivity.cs" />
+    <Compile Include="Forum.aspx.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forum.aspx.designer.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Team.aspx.cs">
       <DependentUpon>Team.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

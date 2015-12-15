@@ -101,7 +101,7 @@
         <p class="pricingExtraInfoTitle">Concessions</p>
         <p>Students, Over 65's and members of our armed forces get 15% off! Valid ID must be shown.</p>
         <p class="pricingExtraInfoTitle">Cancellations</p>
-        <p>All of our Annual Packages now included free mat and towel rental!</p>
+        <p>We accept cancellations on reservations up to 24hours prior to the class or workshop start.</p>
         <p class="pricingExtraInfoTitle">Freeze Periods</p>
         <p>Your account can be frozen twice a year, for up to one month, at a cost of £20 a month.</p>
         <p>Please talk to one of our recptionists or email accounts@whitelotuslondon.co.uk</p>

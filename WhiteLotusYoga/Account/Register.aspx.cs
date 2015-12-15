@@ -37,7 +37,6 @@ namespace WhiteLotusYoga.Account
             var username = "";
             var emailAddress = "";
             var password = "";
-            Response.Write("The Button Works");
             try
             {
                 firstName = Request.Form["firstNameInput"];
@@ -46,15 +45,14 @@ namespace WhiteLotusYoga.Account
                 emailAddress = Request.Form["emailInput"];
                 password = Request.Form["passwordInput"];
 
-
-
                 SqlConnection connStr = new SqlConnection(ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString);
                 connStr.Open();
                 string insertUserAccount = "INSERT INTO account (first_name, last_name, username, email_address, password) VALUES ('" + firstName + "', '" + lastName + "','" + username + "', '" + emailAddress + "', '" + password + "')";
                 SqlCommand command = new SqlCommand(insertUserAccount, connStr);
                 command.ExecuteNonQuery();
                 connStr.Close();
-                Response.Write("Registration was successful!");                
+                Session["UserName"] = Request.Form["usernameInput"];
+                Response.Redirect("~/Account/RegisterTwo");              
             } catch (Exception ex)
             {
                 Response.Write("Error: " + ex.Message);

@@ -6,11 +6,9 @@
         <div class="container">
             <h1>White  Lotus  Yoga</h1>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <b>Peace. Strength. Happiness.</b>
             <br />
-                Donec finibus ut velit et condimentum.
-            </p>
-            <p><a runat="server" href="~/" class="btn btn-primary btn-lg">Find A Class Today</a></p>
+            <p><a runat="server" href="~/Account/Register" class="btn btn-primary btn-lg">Join Today</a></p>
         </div>
     </div>
 
@@ -18,7 +16,7 @@
         <div class="col-md-6">
             <h2 class="text-center"><%: DateTime.Now.ToString("MMMM") %>'s Offer!</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique metus orci, id consequat ex pulvinar nec. Donec finibus ut velit et condimentum. Nulla facilisi.
+                Friendly Fridays! For this month only, White Lotus members with Annual Packages can bring along a guest to sessions on Friday's for no cost!
             </p>
             <div class="button-center">
                 <p>
@@ -30,7 +28,9 @@
         <div class="col-md-6">
             <h2 class="text-center">About White Lotus LDN</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique metus orci, id consequat ex pulvinar nec. Donec finibus ut velit et condimentum. Nulla facilisi. Sed quis semper neque. Donec porttitor orci in nisl congue suscipit. Pellentesque et quam pharetra, rutrum diam sed, gravida elit. Sed tempor lectus at ligula consequat, sed pretium nunc vehicula. Cras vel mattis tortor. Nunc pharetra neque ut massa malesuada, ac varius mi placerat.
+                White Lotus is London's favourite new Yoga Studio south of the river!
+                Relaxation, stillness and peace of mind are moments away under the tutelage of our experienced team!
+                Nature lovers will look forward to our unique summer workshops, hosted in the beautiful Greenwich Park.
             </p>
             <div class="button-center">
                 <p>
@@ -46,15 +46,20 @@
             <div class="container">
                 <table class="homePageTable">
                     <tr>
-                        <td>ID </td>
-                        <td>Name </td>
+                        <td>Class Name </td>
+                        <td>Teacher </td>
+                        <td>Studio </td>
+                        <td>Start </td>
+                        <td>End </td>
+                        <td>Level </td>
+                        <td>Book </td>
                     </tr>
-                    <%=getWhileLoopData()%>
+                    <%=getTodaysClassLoopData()%>
                 </table>
                 <br />
                 <div class="button-center">
                     <p>
-                        <a class="btn btn-default" runat="server" href="~/Schedule">Search Other Dates &raquo;</a>
+                        <a class="btn btn-default" runat="server" href="~/Schedule">Book Classes &raquo;</a>
                     </p>
                 </div>
             </div>
