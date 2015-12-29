@@ -26,14 +26,8 @@
                         <a href="CreateClass">
                             <p class="text-center">Create a New Class</p>
                         </a>
-                        <a href="ViewClassList">
-                            <p class="text-center">View All Classes</p>
-                        </a>
-                        <a href="../Team.aspx">
-                            <p class="text-center">Cancel A Class</p>
-                        </a>
-                        <a href="../Team.aspx">
-                            <p class="text-center">Delete A Class</p>
+                        <a href="ManageClasses">
+                            <p class="text-center">Manage Classes</p>
                         </a>
                     </div>
                 </div>
@@ -62,14 +56,8 @@
                         <a href="CreateWorkshop">
                             <p class="text-center">Create a New Workshop</p>
                         </a>
-                        <a href="ViewWorkshopList">
-                            <p class="text-center">View All Workshops</p>
-                        </a>
-                        <a href="../Team.aspx">
-                            <p class="text-center">Cancel A Workshop</p>
-                        </a>
-                        <a href="../Team.aspx">
-                            <p class="text-center">Delete A Workshop</p>
+                        <a href="ManageWorkshop">
+                            <p class="text-center">Manage Workshops</p>
                         </a>
                     </div>
                 </div>

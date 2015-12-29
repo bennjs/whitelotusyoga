@@ -39,7 +39,7 @@ namespace WhiteLotusYoga.Account
                         //string updateLastLogin = "UPDATE account SET last_log_in_date='" + currentDate + "' WHERE username = '" + Session["UserName"] + "'";
                         //SqlCommand updateLastLoginCommand = new SqlCommand(updateLastLogin, connStr);
                         //updateLastLoginCommand.ExecuteNonQuery();
-                        if (Request.Form["username"] == "admin")
+                        if (Request.Form["username"].Replace(" ", "") == "admin")
                         {
                             Response.Redirect("~/Admin/Dashboard");
                         }

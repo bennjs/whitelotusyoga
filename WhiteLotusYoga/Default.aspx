@@ -52,7 +52,6 @@
                         <td>Start </td>
                         <td>End </td>
                         <td>Level </td>
-                        <td>Book </td>
                     </tr>
                     <%=getTodaysClassLoopData()%>
                 </table>

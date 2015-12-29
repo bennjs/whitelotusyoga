@@ -13,9 +13,17 @@ namespace WhiteLotusYoga
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserName"].ToString() != "admin")
+            try
             {
-                Response.Redirect("~/");
+                if (Session["UserName"].ToString() != "admin")
+                {
+                    Response.Redirect("~/");
+                }
+
+            }
+            catch
+            {
+
             }
         }
 

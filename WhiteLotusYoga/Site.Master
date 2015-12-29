@@ -66,8 +66,16 @@
                                 <li><a runat="server" href="~/Schedule">Schedule</a></li>
                                 <li><a runat="server" href="~/Pricing">Pricing</a></li>
                                 <li><a runat="server" href="~/Forum">Forum</a></li>
+                                <% if (Session["UserName"] == null)
+                                    { %>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
                                 <li><a runat="server" href="~/Account/Register" class="registerLink">Register</a></li>
+                                <% }
+                                    else
+                                    { %>
+                                <li><a href="logout.aspx">Logout</a></li>
+                                <%} %>
+                                
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -119,9 +127,9 @@
                     <hr />
                     <p class="dull">Benjamin Stokes</p>
                     <ul class="content list-inline">
-                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i> @bennjs</a></li>
-                        <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i> GitHub</a></li>
+                        <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i>@bennjs</a></li>
+                        <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i>GitHub</a></li>
                     </ul>
                 </div>
             </footer>

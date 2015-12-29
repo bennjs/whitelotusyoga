@@ -10,6 +10,7 @@ namespace WhiteLotusYoga
     {
         public static SqlConnection GetConnection()
         {
+
             string conString = System.Configuration.ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString;
             return new SqlConnection(conString);
         }

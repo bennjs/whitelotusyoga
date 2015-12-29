@@ -111,7 +111,7 @@ namespace WhiteLotusYoga
 
             try
             {
-                bookingID = Request.Form["bookClass"];
+                bookingID = Request.Form["bookWorkshop"];
                 SqlConnection connStr = new SqlConnection(ConfigurationManager.ConnectionStrings["databaseConnectionString"].ConnectionString);
                 connStr.Open();
                 string classIDFinder = @"SELECT id from account WHERE username = '" + currentUser + "'";
